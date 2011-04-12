@@ -5,6 +5,9 @@ from pyPdf import PdfFileWriter, PdfFileReader
 
 
 class PdfSlicer():
+    @staticmethod
+    def getOutName(iname):
+        return iname[:-4] + "_sliced.pdf"
     def slice(self, ifile, ofile=None, marginv=0, marginh=0):
         output = PdfFileWriter()
         input = PdfFileReader(file(ifile, "rb"))
@@ -43,6 +46,6 @@ class PdfSlicer():
         if ofile is not None:
             outputStream = file(ofile, "wb")
         else:
-            outputStream = file(ifile + "sliced", "wb")
+            outputStream = file(PdfSlicer.getOutName(ifile), "wb")
         output.write(outputStream)
         outputStream.close()

@@ -13,8 +13,8 @@ if __name__ == "__main__":
         slicer.slice(sys.argv[1], sys.argv[2])
     elif len(sys.argv) == 4:
         print "Slicing %s, output %s, with margins vertical %s, horizontal %s" % (
-                sys.argv[1], sys.argv[1] + "sliced", sys.argv[2], sys.argv[3])
-        slicer.slice(sys.argv[1], marginv = int(sys.argv[3]), marginh = int(sys.argv[4]))
+                sys.argv[1], PdfSlicer.getOutName(sys.argv[1]), sys.argv[2], sys.argv[3])
+        slicer.slice(sys.argv[1], marginv = int(sys.argv[2]), marginh = int(sys.argv[3]))
     elif len(sys.argv) == 5:
         print "Slicing %s, output %s, with margins vertical %s, horizontal %s" % (
                 sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4])
