@@ -1,1 +1,6 @@
-This file was created by IntelliJ IDEA 10.0.2 for binding GitHub repository
+== Installation ==
+
+* put the run-pdfslicer.py into the $PYTHON_HOME/Scripts directory
+* put the pdfslicer.py into the $PYTHON_HOME/Lib/site-packages/pdftools/ directory
+* run it by using the run-pdfslicer.py script
+
