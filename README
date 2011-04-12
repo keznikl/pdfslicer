@@ -1,5 +1,7 @@
 == Installation ==
 
+Make sure the pyPdf package is installed.
+
 * put the run-pdfslicer.py into the $PYTHON_HOME/Scripts directory
 * put the pdfslicer.py into the $PYTHON_HOME/Lib/site-packages/pdftools/ directory
 * run it by using the run-pdfslicer.py script
