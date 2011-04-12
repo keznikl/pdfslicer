@@ -5,7 +5,7 @@ from pyPdf import PdfFileWriter, PdfFileReader
 
 
 class PdfSlicer():
-    def slice(self, ifile, ofile, marginv=0, marginh=0):
+    def slice(self, ifile, ofile=None, marginv=0, marginh=0):
         output = PdfFileWriter()
         input = PdfFileReader(file(ifile, "rb"))
         # print the title of document1.pdf
@@ -40,6 +40,9 @@ class PdfSlicer():
             output.addPage(page)
 
         # finally, write "output"
-        outputStream = file(ofile, "wb")
+        if ofile is not None:
+            outputStream = file(ofile, "wb")
+        else:
+            outputStream = file(ifile + "sliced", "wb")
         output.write(outputStream)
         outputStream.close()
